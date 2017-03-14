@@ -38,7 +38,7 @@
 }
 
 .hero-image button {
-  background-color: #a9a9a9;
+  background-color: #6c648b;
   font-size: 1.5em;
   color: #efefef;
 }
@@ -47,11 +47,22 @@
 /*in between*/
 .transition-1 {
   height: 10vh;
-  background-color: rgba(251, 161, 0, 0.9);
+  background-color: #ddd9d9;
 }
 
 /*set of features*/
 .features-1 {
   background-color: #efefef;
-  height: 50vh
+  height: 70vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.features-1 p {
+  max-width: 50%;
+  padding: 5%;
+}
+.features-1 img {
+  max-width: 50%;
+  padding: 5%;
 }
