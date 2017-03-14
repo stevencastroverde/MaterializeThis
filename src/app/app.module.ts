@@ -12,6 +12,8 @@ import { MaterializeUiComponent } from './materialize-ui/materialize-ui.componen
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CodeEditorComponent } from './code-editor/code-editor.component';
 import { AboutComponent } from './about/about.component';
+import { LivePreviewComponent } from './live-preview/live-preview.component';
+import { CodeMirrorComponent } from './code-mirror/code-mirror.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -28,7 +30,9 @@ const appRoutes: Routes = [
     MaterializeUiComponent,
     LandingPageComponent,
     CodeEditorComponent,
-    AboutComponent
+    AboutComponent,
+    LivePreviewComponent,
+    CodeMirrorComponent
   ],
   imports: [
     BrowserModule,
