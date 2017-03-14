@@ -1,0 +1,43 @@
+
+
+.hero-image {
+  max-width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(
+    rgba(107, 186, 167, 0.85),
+    rgba(165, 165, 175, 0.9)
+  ),
+  url(../../assets/materialize.png);
+  background-size: contain;
+
+}
+
+.hero-image h1 {
+  text-align: center;
+  font-size: 4.5em;
+  font-weight: 700;
+  color: #efefef;
+  font-family: 'Baloo Bhaina', cursive;
+  text-shadow: 5px 5px 15px #000;
+  margin-top: 0;
+}
+.hero-image p {
+  color: #efefef;
+  font-size: 1.5em;
+  text-align: center;
+}
+.hero-image button {
+  background-color: #a9a9a9;
+  font-size: 1.5em;
+  alignment: center;
+  color: #efefef;
+}
+.transition-1 {
+  height: 10vh;
+  background-color: #77c9d4;
+}
+
+.features-1 {
+  background-color: #efefef;
+  height: 50vh
+}
