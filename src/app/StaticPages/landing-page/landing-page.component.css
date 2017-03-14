@@ -6,7 +6,7 @@
     rgba(107, 186, 167, 0.99),
     rgba(251, 161, 0, 0.9)
   ),
-  url(../../assets/materialize.png);
+  url(../../../assets/materialize.png);
   background-size: contain;
   text-align: center;
 }
