@@ -5,20 +5,21 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 
+//Components
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
-import { MaterializeUiComponent } from './materialize-ui/materialize-ui.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { CodeEditorComponent } from './code-editor/code-editor.component';
-import { AboutComponent } from './about/about.component';
-import { LivePreviewComponent } from './live-preview/live-preview.component';
-import { CodeMirrorComponent } from './code-mirror/code-mirror.component';
+import { NavBarComponent } from './StaticPages/nav-bar/nav-bar.component';
+import { FooterComponent } from './StaticPages/footer/footer.component';
+import { LandingPageComponent } from './StaticPages/landing-page/landing-page.component';
+import { AboutComponent } from './StaticPages/about/about.component';
+import { PageNotFoundComponent } from './StaticPages/page-not-found/page-not-found.component';
+
+//Modules
+import {CodeEditorModule} from "./codeEditor/code-editor.module";
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'code', component: CodeEditorComponent}
+  { path: '**', component: PageNotFoundComponent}
 ]
 
 
@@ -27,16 +28,14 @@ const appRoutes: Routes = [
     AppComponent,
     NavBarComponent,
     FooterComponent,
-    MaterializeUiComponent,
     LandingPageComponent,
-    CodeEditorComponent,
     AboutComponent,
-    LivePreviewComponent,
-    CodeMirrorComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    CodeEditorModule,
     HttpModule,
     MaterialModule,
     RouterModule.forRoot(appRoutes)
