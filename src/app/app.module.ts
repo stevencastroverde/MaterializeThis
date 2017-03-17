@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './StaticPages/page-not-found/page-not-fou
 //Modules
 import {CodeEditorModule} from "./codeEditor/code-editor.module";
 
+
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'about', component: AboutComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     FooterComponent,
     LandingPageComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
