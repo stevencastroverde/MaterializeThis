@@ -1,5 +1,4 @@
-import { Component, OnInit, OnChanges, AfterViewInit, ElementRef } from '@angular/core';
-
+import { Component, OnInit, OnChanges, AfterViewInit, Renderer } from '@angular/core';
 
 
 
@@ -10,9 +9,9 @@ import { Component, OnInit, OnChanges, AfterViewInit, ElementRef } from '@angula
 
 })
 export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
-  height:number;
+  content: string;
   editor:CodeMirror.Editor;
-  editorNativeElement:any;
+
 
   constructor() { }
 
@@ -25,6 +24,9 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
 
   ngOnChanges(){
 
+  }
+  getContent(){
+    console.log(this.content);
   }
 
 }

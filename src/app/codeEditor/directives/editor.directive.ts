@@ -1,4 +1,4 @@
-import { Directive, Renderer, AfterViewInit } from '@angular/core';
+import { Directive, Renderer} from '@angular/core';
 import * as CodeMirror from 'codemirror';
 
 
@@ -42,9 +42,11 @@ export class EditorDirective {
       this.renderer.selectRootElement('[editor]'),
       {
         lineNumbers: true,
-        mode:{name:'htmlmixed', tabMode: 'indent'},
+
+        mode: "htmlmixed",
         autofocus: true,
-        theme: 'material'
+        theme: 'dracula'
+
 
       }
 
