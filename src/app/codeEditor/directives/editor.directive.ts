@@ -1,6 +1,6 @@
 import { Directive, Renderer, AfterViewInit } from '@angular/core';
+import * as CodeMirror from 'codemirror';
 
-declare var CodeMirror: any;
 
 @Directive({
   selector: '[editor]'
@@ -15,9 +15,13 @@ export class EditorDirective {
       this.renderer.selectRootElement('[editor]'),
       {
         lineNumbers: true,
-        mode:{name: 'html', globalVars: true}
+        mode:{name:'text/html', tabMode: 'indent'},
+        autofocus: true,
+
       }
 
     );
+    this.editor.getDoc().setValue('<html> bitch')
   }
+
 }
