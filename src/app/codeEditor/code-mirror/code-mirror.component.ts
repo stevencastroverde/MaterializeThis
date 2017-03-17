@@ -27,5 +27,4 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
 
   }
 
-
 }
