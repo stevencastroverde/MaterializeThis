@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/codemirror/themes/material.css"
+        "../node_modules/codemirror/theme/material.css"
       ],
       "scripts": ["../node_modules/codemirror/lib/codemirror.js"],
       "environmentSource": "environments/environment.ts",
