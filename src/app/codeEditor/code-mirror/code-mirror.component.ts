@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges, AfterViewInit, ElementRef } from '@angular/core';
-import * as CodeMirror from 'codemirror';
+
+
 
 
 @Component({
