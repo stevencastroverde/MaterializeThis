@@ -23,7 +23,7 @@ import { EditorDirective } from './directives/editor.directive';
     LivePreviewComponent,
     CodeEditorComponent,
     MaterializeUiComponent,
-    EditorDirective
+    // EditorDirective
   ]
 })
 export class CodeEditorModule { }

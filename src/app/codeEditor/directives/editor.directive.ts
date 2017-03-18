@@ -39,7 +39,7 @@ export class EditorDirective {
 
   ngAfterViewInit(){
     this.editor = CodeMirror.fromTextArea(
-      this.renderer.selectRootElement('[editor]'),
+      this.renderer.selectRootElement(''),
       {
         lineNumbers: true,
 
