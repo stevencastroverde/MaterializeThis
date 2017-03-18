@@ -40,16 +40,16 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
 
 <body>
   <header>
-    //Drag your Navigation Elements HERE!!!
+    <!--Drag your Navigation Elements HERE!!!-->
 
     </header>
 <main>
-  //The content of the document......
+  <!--The content of the document......-->
 
 
   </main>
 <footer>
-  //footer goes HERE!
+  <!--footer goes HERE!-->
 
   </footer>
 
