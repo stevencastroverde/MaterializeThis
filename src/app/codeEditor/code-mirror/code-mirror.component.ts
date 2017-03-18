@@ -78,6 +78,7 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
 
   initCodeEditor(config) {
     this.editor = CodeMirror.fromTextArea(this.code.nativeElement, config);
+    this.editor.setSize("100%", "100%");
     this.editor.setValue(this.content);
 
     this.editor.on('change', () => {
