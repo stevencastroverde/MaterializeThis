@@ -1,18 +1,21 @@
 .wrapper{
   display: flex;
-  flex-flow: row nowrap;
-
-
+  flex-direction: row;
+  justify-content: space-between;
+}
+#side-nav-toggle {
+  width: 5%;
+  background-color: #6c648b;
 }
 
-app-code-mirror {
-  max-width: 50%;
-  height:100vh;
-}
+/*app-code-mirror {*/
+  /*max-width: 50%;*/
+  /*height:100vh;*/
+/*}*/
 
-app-live-preview {
-  width: 50%;
-  height:100vh;
-  padding-left: 3%;
-  border: solid 3px black;
-}
+/*app-live-preview {*/
+  /*width: 50%;*/
+  /*height:100vh;*/
+  /*padding-left: 3%;*/
+  /*border: solid 3px black;*/
+/*}*/
