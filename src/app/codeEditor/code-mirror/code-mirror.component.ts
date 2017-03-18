@@ -67,7 +67,7 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
 
   ngAfterViewInit() {
     this.initCodeEditor(this.config);
-    this.editor.setValue(this.content);
+    this.writeValue(this.content);
 
   }
 

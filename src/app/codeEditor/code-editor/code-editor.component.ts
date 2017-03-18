@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodeEditorComponent implements OnInit {
   code: string;
+
+  editorChangeHandler(event: string){
+    this.code = event;
+  }
+
+
+
+
+
   constructor() {
-  this.code = ''
+
   }
 
   ngOnInit() {

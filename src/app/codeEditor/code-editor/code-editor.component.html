@@ -7,7 +7,7 @@
 
 <div class="wrapper">
 
-  <app-code-mirror  (focus)="onFocus()" (blur)="onBlur()"></app-code-mirror>
-  <app-live-preview></app-live-preview>
+  <app-code-mirror  (change)="editorChangeHandler($event)"></app-code-mirror>
+  <app-live-preview [code]="code"></app-live-preview>
 
 </div>

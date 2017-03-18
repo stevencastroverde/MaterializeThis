@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-live-preview',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['live-preview.component.css']
 })
 export class LivePreviewComponent implements OnInit {
+  private _code: string;
+
+  @Input() set code(value: string){
+    this._code = value;
+  }
 
   constructor() { }
 
