@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['code-editor.component.css']
 })
 export class CodeEditorComponent implements OnInit {
-
-  constructor() { }
+  code: string;
+  constructor() {
+  this.code = ''
+  }
 
   ngOnInit() {
   }
