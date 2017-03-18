@@ -7,8 +7,7 @@ import { LivePreviewComponent } from './live-preview/live-preview.component';
 import { CodeEditorComponent } from './code-editor/code-editor.component';
 import { MaterializeUiComponent } from './materialize-ui/materialize-ui.component';
 
-// Code Mirror
-import { EditorDirective } from './directives/editor.directive';
+
 
 
 @NgModule({
@@ -23,7 +22,7 @@ import { EditorDirective } from './directives/editor.directive';
     LivePreviewComponent,
     CodeEditorComponent,
     MaterializeUiComponent,
-    // EditorDirective
+
   ]
 })
 export class CodeEditorModule { }
