@@ -1,5 +1,8 @@
-<template *ngFor="let component of components">
-  <h1>{{component.displayName}}</h1>
+<md-card  *ngFor="let component of components" attr.data-html="{{component.html}}">
+  <md-card-title>{{component.displayName}}</md-card-title>
+  <md-card-subtitle>Category: {{component.category}}</md-card-subtitle>
 
-</template>
-<h1>Hello</h1>
+
+
+
+</md-card>
