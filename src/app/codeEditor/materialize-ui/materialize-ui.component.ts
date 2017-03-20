@@ -16,19 +16,25 @@ import { MaterializeComponentsService } from '../services/materialize-components
 
 
 export class MaterializeUiComponent implements OnInit {
-
+components: Array<any> = [];
   constructor(private materializeComponentsService: MaterializeComponentsService) { }
 
   getCards(){
-    this.materializeComponentsService.getCards()
+     this.materializeComponentsService.getCards()
       .subscribe(
-        data => {console.log(data)}
+        data => {
+          if(Array.isArray(data)){
+            this.components = data;
+          } else {
+            this.components.push(data)
+          }}
       )
   }
 
 
   ngOnInit() {
     this.getCards();
+    console.log(this.components);
   }
 
 }

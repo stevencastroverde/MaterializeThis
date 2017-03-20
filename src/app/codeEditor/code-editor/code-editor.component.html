@@ -1,13 +1,14 @@
 
 
 
-<app-materialize-ui></app-materialize-ui>
 
 
 
-<div class="wrapper">
 
-  <app-code-mirror  (change)="editorChangeHandler($event)"></app-code-mirror>
+<md-sidenav-container class="wrapper">
+  <div id="side-nav-toggle"><a></a><i class="material-icons large" (click)="sidenavOpen(start)">add</i></div>
+  <md-sidenav #start mode="side" [opened]="false"><app-materialize-ui></app-materialize-ui></md-sidenav>
+  <app-code-mirror (change)="editorChangeHandler($event)"></app-code-mirror>
   <app-live-preview [code]="code"></app-live-preview>
+</md-sidenav-container>
 
-</div>

@@ -1,3 +1,8 @@
-<p>
-  materialize-ui works!
-</p>
+<md-card  *ngFor="let component of components" attr.data-html="{{component.html}}">
+  <md-card-title>{{component.displayName}}</md-card-title>
+  <md-card-subtitle>Category: {{component.category}}</md-card-subtitle>
+
+
+
+
+</md-card>
