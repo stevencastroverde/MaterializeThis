@@ -1,4 +1,4 @@
-<md-card  *ngFor="let component of components" draggable="true" attr.data-html="{{component.html}}">
+<md-card  *ngFor="let component of components" draggable="true" (drag)="dragHandler(component)" >
   <md-card-title>{{component.displayName}}</md-card-title>
   <md-card-subtitle>Category: {{component.category}}</md-card-subtitle>
 

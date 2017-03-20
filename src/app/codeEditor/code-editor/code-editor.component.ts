@@ -8,6 +8,7 @@ import {MdSidenav} from "@angular/material";
 })
 export class CodeEditorComponent implements OnInit {
   code: string;
+  copyCode: string;
 
   @ViewChild('start') sidenav: MdSidenav;
 
@@ -19,6 +20,9 @@ sidenavOpen(start: any){
     start.toggle();
 }
 
+dragHandler($event: any){
+    console.log($event);
+}
 
 
   constructor() {
