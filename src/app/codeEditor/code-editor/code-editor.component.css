@@ -1,4 +1,4 @@
-.wrapper{
+#codeShit{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,14 +8,13 @@
   background-color: #6c648b;
 }
 
-/*app-code-mirror {*/
-  /*max-width: 50%;*/
-  /*height:100vh;*/
-/*}*/
+app-code-mirror {
+  max-width: 50%;
+  height:100vh;
+}
 
-/*app-live-preview {*/
-  /*width: 50%;*/
-  /*height:100vh;*/
-  /*padding-left: 3%;*/
-  /*border: solid 3px black;*/
-/*}*/
+app-live-preview {
+  width: 50%;
+  height:100vh;
+  border: solid 3px black;
+}
