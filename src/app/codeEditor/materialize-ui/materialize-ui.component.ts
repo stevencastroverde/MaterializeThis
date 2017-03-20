@@ -16,13 +16,13 @@ import { MaterializeComponentsService } from '../services/materialize-components
 
 
 export class MaterializeUiComponent implements OnInit {
-
+components:any;
   constructor(private materializeComponentsService: MaterializeComponentsService) { }
 
   getCards(){
-    this.materializeComponentsService.getCards()
+     this.materializeComponentsService.getCards()
       .subscribe(
-        data => {console.log(data)}
+        data => {this.components = data}
       )
   }
 
