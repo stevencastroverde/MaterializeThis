@@ -33,13 +33,20 @@ export class MaterializeUiComponent implements OnInit {
           }}
       )
   }
+  getTemplate( component: any,templateLocation: string){
+    this.materializeComponentsService.getTemplate(templateLocation)
+      .subscribe(
+        data => { component.html = data._body}
+    )
+  }
   dragHandler(component: any){
+    this.getTemplate(component, component.template);
     this.dragOver.emit(component.html);
   }
 
   ngOnInit() {
     this.getCards();
-    console.log(this.components);
+
   }
 
 }
