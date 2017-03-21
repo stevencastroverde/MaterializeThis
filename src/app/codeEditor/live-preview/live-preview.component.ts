@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
+
 @Component({
   selector: 'app-live-preview',
   templateUrl: 'live-preview.component.html',
@@ -15,7 +16,7 @@ export class LivePreviewComponent implements OnInit {
   @ViewChild('renderedCode') renderedCode:ElementRef;
 
   loadData(data){
-    this.renderedCode.nativeElement.innerHTML = data;
+    this.renderedCode.nativeElement.src = 'data:text/html;charset=utf-8,' + encodeURI(data)
   }
 
   constructor() { }

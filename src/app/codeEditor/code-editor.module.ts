@@ -8,7 +8,7 @@ import { CodeMirrorComponent } from './code-mirror/code-mirror.component';
 import { LivePreviewComponent } from './live-preview/live-preview.component';
 import { CodeEditorComponent } from './code-editor/code-editor.component';
 import { MaterializeUiComponent } from './materialize-ui/materialize-ui.component';
-import { DndModule } from  'ng2-dnd';
+
 
 
 
@@ -16,7 +16,6 @@ import { DndModule } from  'ng2-dnd';
   imports: [
     CommonModule,
     MaterialModule,
-    DndModule.forRoot(),
     RouterModule.forChild([
       {path: 'code', component: CodeEditorComponent}
     ])
