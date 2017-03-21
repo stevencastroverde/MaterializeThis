@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 #side-nav-toggle {
   width: 5%;
   background-color: #6c648b;
@@ -17,4 +18,10 @@ app-live-preview {
   width: 50%;
   height:100vh;
   border: solid 3px black;
+}
+
+#plus-sign:hover{
+  cursor: pointer;
+  color: white;
+  transition: .5s ease-in;
 }
