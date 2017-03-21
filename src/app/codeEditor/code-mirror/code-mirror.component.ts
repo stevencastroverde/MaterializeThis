@@ -102,10 +102,11 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
     this.editor.on('drop', ( instance: CodeMirrorComponent, $event:any)=>{
       let xCoord = $event.pageX;
       let yCoord = $event.pageY;
-      let coords= {left: xCoord +1, top: yCoord};
+      let coords= {left: xCoord, top: yCoord};
       let dropLocation = this.editor.coordsChar(coords);
+      let token = this.editor.getTokenAt(dropLocation);
       let doc = this.editor.getDoc();
-     doc.replaceRange(this._dragCode,dropLocation);
+      doc.replaceRange('\n'+this._dragCode +'\n',{line:dropLocation.line, ch:token.start }, {line:dropLocation.line, ch:token.end});
     })
   }
 
