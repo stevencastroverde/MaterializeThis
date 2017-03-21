@@ -16,18 +16,26 @@ import * as CodeMirror from 'codemirror';
 
 })
 export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
+  private _dragCode:string;
   @Output() change = new EventEmitter();
   @Output() focus = new EventEmitter();
   @Output() blur = new EventEmitter();
   @Output() editor = null;
-
+  @Input() set dragCode(value:string){
+    this._dragCode = value;
+    console.log(this._dragCode);
+  }
   @ViewChild('code') code;
+
 
   config: any = {
     lineNumbers: true,
     mode: "htmlmixed",
     autofocus: true,
-    theme: 'dracula'
+    handleMouseEvents: true,
+    dragDrop: true,
+    theme: 'dracula',
+    drag: 'target'
   }
 
   content: string = `<!DOCTYPE html>
@@ -91,6 +99,14 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
     this.editor.on('blur', () => {
       this.blur.emit()
     });
+    this.editor.on('drop', ( instance: CodeMirrorComponent, $event:any)=>{
+      let xCoord = $event.pageX;
+      let yCoord = $event.pageY;
+      let coords= {left: xCoord +1, top: yCoord};
+      let dropLocation = this.editor.coordsChar(coords);
+      let doc = this.editor.getDoc();
+     doc.replaceRange(this._dragCode,dropLocation);
+    })
   }
 
   updateValue(value) {
