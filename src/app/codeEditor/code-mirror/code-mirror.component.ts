@@ -32,7 +32,10 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
     lineNumbers: true,
     mode: "htmlmixed",
     autofocus: true,
-    theme: 'dracula'
+    handleMouseEvents: true,
+    dragDrop: true,
+    theme: 'dracula',
+    drag: 'target'
   }
 
   content: string = `<!DOCTYPE html>
@@ -96,9 +99,13 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
     this.editor.on('blur', () => {
       this.blur.emit()
     });
-    this.editor.on('drop', (instance, $event)=>{
-      let data = $event.dataTransfer.getData('text/html');
-      this.updateValue(data);
+    this.editor.on('drop', ( instance: CodeMirrorComponent, $event:any)=>{
+      let xCoord = $event.pageX;
+      let yCoord = $event.pageY;
+      let coords= {left: xCoord +1, top: yCoord};
+      let dropLocation = this.editor.coordsChar(coords);
+      let doc = this.editor.getDoc();
+     doc.replaceRange(this._dragCode,dropLocation);
     })
   }
 
