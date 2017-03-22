@@ -26,7 +26,6 @@ export class LivePreviewComponent implements OnInit, OnChanges {
 
   }
 ngOnChanges(changes:any): void{
-    console.log(changes);
   if(changes.code.previousValue === undefined){
     this.loadData(changes.code.currentValue);
   } else if (changes.code.currentValue !== changes.code.previousValue){
