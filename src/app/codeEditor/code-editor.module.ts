@@ -8,6 +8,7 @@ import { CodeMirrorComponent } from './code-mirror/code-mirror.component';
 import { LivePreviewComponent } from './live-preview/live-preview.component';
 import { CodeEditorComponent } from './code-editor/code-editor.component';
 import { MaterializeUiComponent } from './materialize-ui/materialize-ui.component';
+import { DownloadComponent } from './download/download.component';
 
 
 
@@ -25,6 +26,7 @@ import { MaterializeUiComponent } from './materialize-ui/materialize-ui.componen
     LivePreviewComponent,
     CodeEditorComponent,
     MaterializeUiComponent,
+    DownloadComponent
 
   ]
 })
