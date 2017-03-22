@@ -36,7 +36,7 @@ export class MaterializeUiComponent implements OnInit {
   getTemplate( component: any,templateLocation: string){
     this.materializeComponentsService.getTemplate(templateLocation)
       .subscribe(
-        data => { component.html = data._body}
+        data => { component.html = data}
     )
   }
   dragHandler(component: any){

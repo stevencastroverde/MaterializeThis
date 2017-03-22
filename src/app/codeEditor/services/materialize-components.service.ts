@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http,Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
@@ -14,9 +14,12 @@ export class MaterializeComponentsService {
       .map(res => res.json());
   }
   getTemplate(templateUrl: string){
-    return this.http.get(`../../assets/templates/${templateUrl}`)
-      .map((html:any) => html);
+    return this.http.get(`./assets/templates${templateUrl}`)
+      .map(this.extractData);
   };
 
+    extractData(res:Response):string{
+      return res.text();
+    }
 }
 
