@@ -57,12 +57,12 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
 
 
   </main>
-<footer>
-  <!--footer goes HERE!-->
+<div class="footer">
+  <!--footer goes HERE! Be sure to uncomment Script Tag as Well!!!-->
 
   </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>-->
   </body>
 
   </html>`
