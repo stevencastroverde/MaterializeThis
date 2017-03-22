@@ -15,7 +15,7 @@ import * as CodeMirror from 'codemirror';
   }]
 
 })
-export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
+export class CodeMirrorComponent implements  AfterViewInit {
   private _dragCode:string;
   @Output() change = new EventEmitter();
   @Output() focus = new EventEmitter();
@@ -23,7 +23,6 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
   @Output() editor = null;
   @Input() set dragCode(value:string){
     this._dragCode = value;
-    console.log(this._dragCode);
   }
   @ViewChild('code') code;
 
@@ -32,13 +31,11 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
     lineNumbers: true,
     mode: "htmlmixed",
     autofocus: true,
-    handleMouseEvents: true,
     dragDrop: true,
-    theme: 'dracula',
-    drag: 'target'
+    theme: 'dracula'
   }
-
-  content: string = `<!DOCTYPE html>
+  private content: string;
+  starter: string = `<!DOCTYPE html>
   <html>
 
   <head>
@@ -60,34 +57,28 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
 <div class="footer">
   <!--footer goes HERE! Be sure to uncomment Script Tag as Well!!!-->
 
-  </footer>
+  </div>
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>-->
   </body>
 
-  </html>`
+  </html>`;
 
 
-  constructor(private renderer: Renderer) {
+  constructor() {
   }
 
-  ngOnInit() {
-  }
 
   ngAfterViewInit() {
     this.initCodeEditor(this.config);
-    this.writeValue(this.content);
 
   }
 
-  ngOnChanges() {
-
-  }
 
   initCodeEditor(config) {
     this.editor = CodeMirror.fromTextArea(this.code.nativeElement, config);
     this.editor.setSize("100%", "100%");
-    this.editor.setValue(this.content);
+    this.editor.setValue(this.starter);
 
     this.editor.on('change', () => {
       this.updateValue(this.editor.getValue())
@@ -100,6 +91,7 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
       this.blur.emit()
     });
     this.editor.on('drop', ( instance: CodeMirrorComponent, $event:any)=>{
+      $event.preventDefault();
       let xCoord = $event.pageX;
       let yCoord = $event.pageY;
       let coords= {left: xCoord, top: yCoord};
@@ -121,6 +113,7 @@ export class CodeMirrorComponent implements OnInit, OnChanges, AfterViewInit {
     this.content = value || '';
     if (this.editor) {
       this.editor.setValue(this.content);
+
     }
   }
 

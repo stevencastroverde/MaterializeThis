@@ -16,7 +16,7 @@ import { MaterializeComponentsService } from '../services/materialize-components
 
 
 export class MaterializeUiComponent implements OnInit {
-  @Output() dragOver: EventEmitter<any> = new EventEmitter
+  @Output() dragOver: EventEmitter<any> = new EventEmitter;
 
 
   components: Array<any> = [];

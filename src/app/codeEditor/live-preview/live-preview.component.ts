@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import {Component, OnInit, Input, ViewChild, ElementRef, OnChanges, SimpleChange} from '@angular/core';
 
 
 @Component({
@@ -6,12 +6,13 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
   templateUrl: 'live-preview.component.html',
   styleUrls: ['live-preview.component.css']
 })
-export class LivePreviewComponent implements OnInit {
+export class LivePreviewComponent implements OnInit, OnChanges {
   private _code: string;
 
   @Input() set code(value: string){
-    this.loadData(value);
+    this._code = value;
   }
+
 
   @ViewChild('renderedCode') renderedCode:ElementRef;
 
@@ -24,5 +25,15 @@ export class LivePreviewComponent implements OnInit {
   ngOnInit() {
 
   }
+ngOnChanges(changes:any): void{
+    console.log(changes);
+  if(changes.code.previousValue === undefined){
+    this.loadData(changes.code.currentValue);
+  } else if (changes.code.currentValue !== changes.code.previousValue){
+    this.loadData(changes.code.currentValue);
+  } else {
+    console.log('no changes to render')
+  }
+}
 
 }

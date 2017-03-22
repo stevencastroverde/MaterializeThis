@@ -25,3 +25,7 @@ app-live-preview {
   color: white;
   transition: .5s ease-in;
 }
+
+md-sidenav{
+  max-width: 18%;
+}
