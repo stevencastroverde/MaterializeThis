@@ -8,10 +8,11 @@ import {Component, OnInit, Input, ViewChild, ElementRef, OnChanges, SimpleChange
 })
 export class LivePreviewComponent implements OnInit, OnChanges {
   private _code: string;
-
+  private starterText: string = `<h1>This Is your Live Preview!</h1> <h2>This view will change as add code </h2>`
   @Input() set code(value: string){
     this._code = value;
   }
+
 
 
   @ViewChild('renderedCode') renderedCode:ElementRef;
@@ -23,7 +24,7 @@ export class LivePreviewComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-
+    this.loadData(this.starterText);
   }
 ngOnChanges(changes:any): void{
   if(changes.code.previousValue === undefined){
