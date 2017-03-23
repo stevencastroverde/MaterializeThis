@@ -3,9 +3,10 @@
     <div id="download">
      <app-download [codeToDownLoad]="code"></app-download>
     </div>
-    <div id="side-nav-toggle"><a class="btn-large waves-effect waves-light deep-purple" (click)="sidenavOpen(start)"><i class="material-icons">add</i></a></div>
+
     <md-sidenav #start mode="side" [opened]="false"><app-materialize-ui id="ui-components" (dragOver)="dragHandler($event)"></app-materialize-ui></md-sidenav>
-    <div id="codeShit">
+    <div id="main-view">
+      <div id="side-nav-toggle" (click)="sidenavOpen(start)" class="z-depth-1 valign-wrapper"><i  class="material-icons valign">add</i></div>
      <app-code-mirror (change)="editorChangeHandler($event)" [dragCode]="dragCode"></app-code-mirror>
       <app-live-preview [code]="code"></app-live-preview>
   </div>

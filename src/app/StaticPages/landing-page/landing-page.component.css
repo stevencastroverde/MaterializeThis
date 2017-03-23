@@ -9,18 +9,19 @@
   url(../../../assets/materialize.png);
   background-size: contain;
   text-align: center;
+  padding-top: 10%;
+
 }
 
 .hero-image h1 {
   display: inline-block;
-  font-size: 4.5em;
+  font-size: 5.5em;
   font-weight: 700;
   color: #fefefe;
   font-family: 'Baloo Bhaina', cursive;
   text-shadow: 5px 5px 15px #000;
   margin: 0;
   padding: 0;
-
 }
 
 .hero-image p {
@@ -33,6 +34,7 @@
   margin: auto;
   display: block;
   padding-bottom: 2%;
+  width: 50%;
 
 
 }
@@ -55,7 +57,7 @@
 .features-1 {
   background-color: #efefef;
   color: #212121;
-  height: 70vh;
+  height: 40vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -68,6 +70,8 @@
 }
 .features-1 ul {
   padding-left: 3%;
+  margin: 2% 0 0 5%;
+  font-size: 2rem;
 }
 .features-1 li {
   padding:2%;

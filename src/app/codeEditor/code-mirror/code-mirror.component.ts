@@ -29,8 +29,9 @@ export class CodeMirrorComponent implements  AfterViewInit {
 
   config: any = {
     lineNumbers: true,
-    mode: "htmlmixed",
+    mode: "text/html",
     autofocus: true,
+    autoCloseTags: true,
     dragDrop: true,
     theme: 'dracula'
   }
@@ -80,8 +81,9 @@ export class CodeMirrorComponent implements  AfterViewInit {
     this.editor.setSize("100%", "100%");
     this.editor.setValue(this.starter);
 
-    this.editor.on('change', () => {
-      this.updateValue(this.editor.getValue())
+    this.editor.on('change', (instance:CodeMirrorComponent, $event:any) => {
+      let doc = this.editor.getDoc();
+      this.updateValue(doc.getValue())
     });
 
     this.editor.on('focus', () => {
@@ -91,14 +93,14 @@ export class CodeMirrorComponent implements  AfterViewInit {
       this.blur.emit()
     });
     this.editor.on('drop', ( instance: CodeMirrorComponent, $event:any)=>{
-      $event.preventDefault();
       let xCoord = $event.pageX;
       let yCoord = $event.pageY;
       let coords= {left: xCoord, top: yCoord};
       let dropLocation = this.editor.coordsChar(coords);
       let token = this.editor.getTokenAt(dropLocation);
       let doc = this.editor.getDoc();
-      doc.replaceRange('\n'+this._dragCode +'\n',{line:dropLocation.line, ch:token.start }, {line:dropLocation.line, ch:token.end});
+      doc.replaceRange(this._dragCode,{line:(dropLocation.line), ch:token.start }, {line:dropLocation.line, ch:token.end})
+
     })
   }
 
@@ -106,15 +108,6 @@ export class CodeMirrorComponent implements  AfterViewInit {
     this.content = value;
     this.onTouched();
     this.change.emit(value)
-  }
-
-
-  writeValue(value) {
-    this.content = value || '';
-    if (this.editor) {
-      this.editor.setValue(this.content);
-
-    }
   }
 
   onChange(_) {
