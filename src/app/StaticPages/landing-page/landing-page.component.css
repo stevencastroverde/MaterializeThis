@@ -3,8 +3,8 @@
   max-width: 100%;
   height: 90vh;
   background-image: linear-gradient(
-    rgba(107, 186, 167, 0.99),
-    rgba(251, 161, 0, 0.9)
+    rgba(0, 149, 135, 0.99),
+    rgba(254, 192, 7, 0.9)
   ),
   url(../../../assets/materialize.png);
   background-size: contain;
@@ -15,7 +15,7 @@
   display: inline-block;
   font-size: 4.5em;
   font-weight: 700;
-  color: #efefef;
+  color: #fefefe;
   font-family: 'Baloo Bhaina', cursive;
   text-shadow: 5px 5px 15px #000;
   margin: 0;
@@ -38,29 +38,42 @@
 }
 
 .hero-image button {
-  background-color: #6c648b;
-  font-size: 1.5em;
+  background-color: #00796b;
+  font-size: 2em;
   color: #efefef;
+  padding: 2% 3%;
 }
 
 
 /*in between*/
 .transition-1 {
-  height: 10vh;
-  background-color: #ddd9d9;
+  height: 5vh;
+  background-color: #bdbdbd;
 }
 
 /*set of features*/
 .features-1 {
   background-color: #efefef;
+  color: #212121;
   height: 70vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-content: center;
 }
-.features-1 p {
+.features-1 .dnd-features {
   max-width: 50%;
   padding: 5%;
+  font-size: 1.5em;
+}
+.features-1 ul {
+  padding-left: 3%;
+}
+.features-1 li {
+  padding:2%;
+  font-size: .7em;
+  list-style: circle;
+  color: #757575;
 }
 .features-1 img {
   max-width: 50%;
