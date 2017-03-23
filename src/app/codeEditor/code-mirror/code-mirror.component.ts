@@ -33,6 +33,8 @@ export class CodeMirrorComponent implements  AfterViewInit {
     mode: "htmlmixed",
     autofocus: true,
     autoCloseTags: true,
+    autoCloseBrackets: true,
+    matchBrackets: true,
     dragDrop: true,
     theme: 'dracula'
   }
