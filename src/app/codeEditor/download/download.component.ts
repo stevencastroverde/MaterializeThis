@@ -9,7 +9,7 @@ export class DownloadComponent implements OnInit {
   private _codeToDownload: string;
 
 
-  @Input() set code(value: string){
+  @Input() set codeToDownLoad(value: string){
     this._codeToDownload = value;
   }
   constructor() { }

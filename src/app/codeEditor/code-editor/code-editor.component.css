@@ -1,12 +1,17 @@
-#codeShit{
+.wrapper{
+  background-color: #bdbdbd;
+}
+
+#main-view{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 5%;
 }
 
-#side-nav-toggle {
-  width: 5%;
-  background-color: #6c648b;
+#download{
+  text-align: center;
+  padding-top: 3%;
 }
 
 app-code-mirror {
@@ -17,15 +22,28 @@ app-code-mirror {
 app-live-preview {
   width: 50%;
   height:100vh;
-  border: solid 3px black;
-}
-
-#plus-sign:hover{
-  cursor: pointer;
-  color: white;
-  transition: .5s ease-in;
+  border: solid 1px #757575;
+  background-color: #fefefe;
 }
 
 md-sidenav{
   max-width: 18%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#side-nav-toggle{
+  width: 2%;
+  text-align: center;
+  background-color: #009587;
+}
+#side-nav-toggle i {
+  font-size: 1.5em;
+  color: #fefefe;
+}
+
+#side-nav-toggle:hover {
+  background-color: #b1deda;
+  transition: .5s ease-in-out;
+
 }

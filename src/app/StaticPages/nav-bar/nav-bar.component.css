@@ -5,14 +5,12 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #6bbaa7;
-
 
 }
 
   #title{
   font-size: 1.5em;
-  color: #2b4141;
+  color: #fefefe;
   margin-left: 2%;
   font-family: 'Baloo Bhaina', cursive;
 
@@ -38,7 +36,8 @@
 
 .link a  {
   text-decoration: none;
-  color: #2b4141;
+  color: #fefefe;
+  font-size: 1.2em;
 }
 .link a:hover {
   color: #ddf8e8;
