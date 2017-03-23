@@ -2,6 +2,7 @@ import { Component, OnInit, OnChanges, AfterViewInit, Input, Output, Renderer, E
 ViewChild} from '@angular/core';
 import { NG_VALUE_ACCESSOR  } from '@angular/forms';
 import * as CodeMirror from 'codemirror';
+import 'codemirror/mode/htmlmixed/htmlmixed';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class CodeMirrorComponent implements  AfterViewInit {
 
   config: any = {
     lineNumbers: true,
-    mode: "text/html",
+    mode: "htmlmixed",
     autofocus: true,
     autoCloseTags: true,
     dragDrop: true,
@@ -60,7 +61,7 @@ export class CodeMirrorComponent implements  AfterViewInit {
 
   </div>
 
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
   </body>
 
   </html>`;
