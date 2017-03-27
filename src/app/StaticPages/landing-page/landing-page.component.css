@@ -49,37 +49,60 @@
 
 /*in between*/
 .transition-1 {
-  height: 5vh;
+  height: 3vh;
   background-color: #bdbdbd;
 }
 
 /*set of features*/
 .features-1 {
-  background-color: #efefef;
+  background-color: #fff;
   color: #212121;
-  height: 40vh;
+  height: 100vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-content: center;
 }
-.features-1 .dnd-features {
+ .dnd-features {
   max-width: 50%;
-  padding: 5%;
-  font-size: 1.5em;
+  padding: 0 5%;
+  font-size: 2.5em;
+
 }
-.features-1 ul {
+.dnd-features ul {
   padding-left: 3%;
   margin: 2% 0 0 5%;
-  font-size: 2rem;
+
 }
-.features-1 li {
+.dnd-features li {
   padding:2%;
-  font-size: .7em;
+  font-size: 1.5rem;
   list-style: circle;
   color: #757575;
 }
-.features-1 img {
-  max-width: 50%;
+.dnd{
+  width: 65%;
+  height: auto;
+  margin-right: 2%;
+}
+.transition-2 {
+  height: 3vh;
+  background-color: #bdbdbd;
+}
+
+.features-2{
+  background-color: #efefef;
+  color: #212121;
+  height: 100vh;
+  text-align: center;
   padding: 5%;
+}
+
+.features-2 h4 {
+  padding:3%;
+}
+.features-2 button{
+  font-size: 2em;
+  color: #efefef;
+  padding: 2% 3%;
 }
