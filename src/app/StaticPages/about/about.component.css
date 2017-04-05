@@ -1,0 +1,37 @@
+.body{
+  background-color: #efefef;
+  height: 100vh;
+}
+
+.main {
+  padding: 2%;
+  border: 1px solid #bdbdbd;
+  background-color: #fefefe;
+
+}
+#tech {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  color: #212;
+}
+
+#tech h2 {
+  font-size: 1.5em;
+}
+.code-use {
+  text-align: center;
+}
+.code-use a  {
+  font-size: 2em;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contact-info a {
+  color: #00796b;
+  font-size: 1.5rem;
+}
