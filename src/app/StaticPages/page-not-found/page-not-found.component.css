@@ -1,0 +1,23 @@
+.main {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: #212;
+}
+.main h1 {
+  font-size: 4em;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.main img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.main p {
+  font-size: 1.5em;
+}
+.main iframe {
+  padding:2%;
+}
